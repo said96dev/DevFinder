@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
-import { ModeToggle } from '@/components/mode-toggle'
+import NextTopLoader from 'nextjs-toploader';
 const inter = Inter({ subsets: ['latin'] })
 import { Header } from "./header";
 
@@ -26,6 +26,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <NextTopLoader
+          />
+
           <Header />
           {children}
         </ThemeProvider>
